@@ -26,7 +26,7 @@ function ConvertTxt(el)
   console.log("link: "+Link);
   let regex = /\?format=/i;
   console.log("regex: "+regex);
-  let pos = Link.indexOf(regex);
+  let pos = Link.search(regex);
   console.log("pos: "+pos);
   Link = Link.slice(0,pos);
   console.log("removed end: "+Link);
