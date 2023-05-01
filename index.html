@@ -30,7 +30,7 @@ function ConvertTxt(el)
   console.log("pos: "+pos);
   Link = Link.slice(0,pos);
   console.log("removed end: "+Link);
-  Link.replace("preview", "i");
+  Link = Link.replace("preview", "i");
   console.log("final link: "+Link);
   //link format = preview.redd.it/l1pqfp7bw4xa1.gif?format=mp4&v=enabled&s=b250551c08f8780810e4a58a1c7688f3b0c795b6
   //grab everything before the ?: "[A-Za-z]+://([A-Za-z]+(\.[A-Za-z]+)+)/([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)\"
