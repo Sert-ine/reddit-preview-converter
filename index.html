@@ -25,7 +25,9 @@ function ConvertTxt(el)
   var Link = TxtEl.innerHTML;
   console.log("link: "+Link);
   let regex = /\?format=/i;
+  console.log("regex: "+regex);
   let pos = Link.indexOf(regex);
+  console.log("pos: "+pos);
   Link = Link.slice(0,pos);
   console.log("removed end: "+Link);
   Link.replace("preview", 'i');
