@@ -4,17 +4,19 @@
 <title>Preview Reddit Link Converter
 </title>
 <style>
+  #insertion_box
+  {
+    padding: 5px;
+  }
 </style>
-#insertion_box
-{
-  padding: 5px;
-}
+
 </head>
 <body>
-<div contenteditable="true" id="insertion_box">
-</div>
-<button id="SubmitButton" onclick="ConvertTxt(this)">
-</button>
+  <section>
+    <div contenteditable="true" id="insertion_box">
+    </div>
+    <button type="Button" id="SubmitButton" onclick="ConvertTxt(this)">Convert link</button>
+  </section>
 </body>
 <script>
 function ConvertTxt(el)
@@ -23,9 +25,9 @@ function ConvertTxt(el)
   let Link = TxtEl.innerHTML;
   console.log(Link);
   let regex = /\?[A-Za-z0-9]+=[A-Za-z0-9]+&v=[A-Za-z0-9]+&s=[A-Za-z0-9]+/i;
-  link.replace(regex, '');
+  Link.replace(regex, '');
   console.log(Link);
-  link.replace("preview", 'i');
+  Link.replace("preview", 'i');
   console.log(Link);
   //link format = preview.redd.it/l1pqfp7bw4xa1.gif?format=mp4&v=enabled&s=b250551c08f8780810e4a58a1c7688f3b0c795b6
   //grab everything before the ?: "[A-Za-z]+://([A-Za-z]+(\.[A-Za-z]+)+)/([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)\"
