@@ -17,6 +17,7 @@
     </div>
     <button type="Button" id="SubmitButton" onclick="ConvertTxt(this)">Convert link</button>
   </section>
+  <img id="preview_image" src="">
 </body>
 <script>
 function ConvertTxt(el)
@@ -34,6 +35,8 @@ function ConvertTxt(el)
   console.log("final link: "+Link);
   //link format = preview.redd.it/l1pqfp7bw4xa1.gif?format=mp4&v=enabled&s=b250551c08f8780810e4a58a1c7688f3b0c795b6
   //grab everything before the ?: "[A-Za-z]+://([A-Za-z]+(\.[A-Za-z]+)+)/([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)\"
+  const ImgPreview = document.getElementById("preview_image");
+  ImgPreview.src = Link;
   TxtEl.innerHTML = Link;
   navigator.clipboard.writeText(Link);
   alert("Copied the text: " + Link);
